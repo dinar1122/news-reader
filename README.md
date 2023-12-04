@@ -1,5 +1,5 @@
 # news-reader
-[https://imgur.com/M4LvtuM](https://imgur.com/M4LvtuM)
+[Главная](https://imgur.com/M4LvtuM)
 
 ## Project setup
 ```
