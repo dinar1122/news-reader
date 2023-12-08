@@ -5,7 +5,7 @@
       <SubsComp v-model:switcher="switcherSubsFilter" />
     </div>
     <SearchResultComp v-if="!!searchValue" :dataResponse="dataResponse" :reqName="searchValue" />
-    <div v-if="!sources">
+    <div v-if="!switcherSubsFilter">
       <CategoryedList v-for="name in categoryName" :key="name" :name="name" :switcherSubsFilter="switcherSubsFilter" />
     </div>
     <div v-else>
@@ -34,10 +34,10 @@ let previousSearchValue = '';
 
 const dataResponseBySubs = ref(null)
 const dataResponse = ref(null)
-
 const searchValue = ref('');
-
 const switcherSubsFilter = ref(false)
+
+localStorage.setItem('newsSources', JSON.stringify([]));
 
 const sources = computed(() => switcherSubsFilter.value ? JSON.parse(localStorage.getItem('newsSources')).join(',') : ''); //беру источники из локал
 
@@ -64,7 +64,6 @@ function search() {
   }
 }
 const fetchNewsByReq = (req) => {
-
   newsService.getNewsByReq(req)
     .then(response => {
       dataResponse.value = response.data.articles
@@ -75,7 +74,4 @@ const fetchNewsByReq = (req) => {
 
 };
 watch(searchValue, search);
-
-
-
 </script>

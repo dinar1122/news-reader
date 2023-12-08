@@ -5,7 +5,6 @@
       <button v-if="visible" @click="showMore" class="category-title category-texted">Показать больше</button>
       <button v-if="!visible" @click="hide" class="category-title category-texted">Показать меньше</button>
     </div>
-
     <div class="category-list-items">
       <NewsItem v-for="(info, key) in dataResponse" :key="key" :info="info" :title="info.title"
         :description="info.description" :urlToImage="info.urlToImage" :url="info.url" :source="info.source.name" />
@@ -15,8 +14,7 @@
 
 <script setup>
 import NewsItem from '../components/NewsItem.vue'
-
-import { defineProps} from 'vue';
+import { defineProps } from 'vue';
 import { onMounted, ref } from 'vue';
 import newsService from '@/services/newsService';
 
@@ -26,20 +24,15 @@ const category = defineProps({
   switcherSubsFilter: Boolean,
 });
 
-
-
-
 function showMore() {
   visible = !visible;
   fetchNews(24);
-
 }
+
 function hide() {
   visible = !visible
   fetchNews(4)
 }
-
-
 
 let dataResponse = ref({});
 
@@ -50,7 +43,6 @@ const fetchNews = (pageSize) => {
     }).catch(error => {
       console.log(error)
     });
-
 };
 
 onMounted(fetchNews);

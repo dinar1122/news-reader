@@ -59,7 +59,6 @@ if (props.description) {
   }
 }
 
-
 function subscribe(event) {
   const existingSourcesFunc = JSON.parse(localStorage.getItem('newsSources')) ?? []
   event.preventDefault();
@@ -90,7 +89,7 @@ watchEffect(() => {
   isExistLocal.value = sources.includes(sourceName);
   if (trigger.value) { trigger.value = !trigger.value } //вызвал изменеие переменной isExistLocal с помощью триггера
 });
-
 </script>
 <style>
-@import "./../assets/base.css";</style>
+@import "./../assets/base.css";
+</style>

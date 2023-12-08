@@ -245,3 +245,8 @@ body {
   padding: 7px;
   opacity: 70%;
 }
+.no-data {
+  margin: 40px auto 40px; 
+  background-color: inherit;
+  font-size: 25px;
+}

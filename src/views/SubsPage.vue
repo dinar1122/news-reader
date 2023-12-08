@@ -3,10 +3,9 @@
     <div class=" home-button" style="">Home</div>
   </router-link>
   <div class="category-list subs-page-container">
-    <div v-if="subs.value === null" class="category-title" style="margin: auto; background-color: inherit;"> No
+    <div v-if="!subs.length" class="category-title no-data"> No
       subscriptions
     </div>
-
     <div class="subs-page-item" v-for="name in subs" :key="name">
       <div class="category-title">{{ name }}</div>
       <div class="category-title" @click="unsub(name)">Unsubscribe</div>
@@ -17,7 +16,7 @@
 import { ref } from 'vue';
 
 const subs = ref(JSON.parse(localStorage.getItem('newsSources')))
-
+console.log(!!subs.value)
 function unsub(sourceName) {
   let indexSourceInLocal = subs.value.indexOf(sourceName)
   if (indexSourceInLocal !== -1) {
@@ -26,4 +25,6 @@ function unsub(sourceName) {
   }
 }
 </script>
-<style>@import "./../assets/base.css";</style>
+<style>
+@import "./../assets/base.css";
+</style>
