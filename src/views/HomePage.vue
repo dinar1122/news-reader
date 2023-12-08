@@ -37,7 +37,9 @@ const dataResponse = ref(null)
 const searchValue = ref('');
 const switcherSubsFilter = ref(false)
 
-localStorage.setItem('newsSources', JSON.stringify([]));
+if (!localStorage.getItem('newsSources')) {
+  localStorage.setItem('newsSources', JSON.stringify([]));
+}
 
 const sources = computed(() => switcherSubsFilter.value ? JSON.parse(localStorage.getItem('newsSources')).join(',') : ''); //беру источники из локал
 

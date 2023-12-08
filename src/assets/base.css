@@ -246,7 +246,13 @@ body {
   opacity: 70%;
 }
 .no-data {
-  margin: 40px auto 40px; 
+  color: #064a34d4;
+  font-size: 1rem;
+  font-style: normal;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  margin: 40px auto ; 
   background-color: inherit;
   font-size: 25px;
+  width: max-content;
 }

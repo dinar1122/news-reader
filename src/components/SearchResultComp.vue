@@ -8,7 +8,7 @@
         :description="info.description" :urlToImage="info.urlToImage" :url="info.url" :source="info.source.name"
         :publishedAt="info.publishedAt" />
     </div>
-    <div v-else class="category-title no-data" >No
+    <div v-else class="no-data" >No
       subscriptions</div>
   </div>
 </template>
