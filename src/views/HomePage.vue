@@ -4,9 +4,14 @@
       <SearchComp @custom-event="search" v-model="searchValue" />
       <SubsComp v-model:switcher="switcherSubsFilter" />
     </div>
-    <SearchResultComp v-if="!!searchValue" :dataResponse="dataResponse" :reqName="searchValue" />
+    <SearchResultComp v-if="!!searchValue" 
+      :dataResponse="dataResponse" 
+      :reqName="searchValue" />
     <div v-if="!switcherSubsFilter">
-      <CategoryedList v-for="name in categoryName" :key="name" :name="name" :switcherSubsFilter="switcherSubsFilter" />
+      <CategoryedList v-for="name in categoryName" 
+      :key="name" 
+      :name="name" 
+      :switcherSubsFilter="switcherSubsFilter" />
     </div>
     <div v-else>
       <SearchResultComp :dataResponse="dataResponseBySubs" />

@@ -6,8 +6,14 @@
       <button v-if="!visible" @click="hide" class="category-title category-texted">Hide</button>
     </div>
     <div class="category-list-items">
-      <NewsItem v-for="(info, key) in dataResponse" :key="key" :info="info" :title="info.title"
-        :description="info.description" :urlToImage="info.urlToImage" :url="info.url" :source="info.source.name" />
+      <NewsItem v-for="(info, key) in dataResponse" 
+      :key="key" 
+      :info="info" 
+      :title="info.title"
+      :description="info.description" 
+      :urlToImage="info.urlToImage" 
+      :url="info.url" 
+      :source="info.source.name" />
     </div>
   </div>
 </template>
