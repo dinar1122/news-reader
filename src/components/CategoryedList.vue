@@ -2,8 +2,8 @@
   <div class="category-list">
     <div class="category-title-container">
       <div class="category-title category-texted" style="float: inline-end; " @click="showMore">{{ category.name }}</div>
-      <button v-if="visible" @click="showMore" class="category-title category-texted">Показать больше</button>
-      <button v-if="!visible" @click="hide" class="category-title category-texted">Показать меньше</button>
+      <button v-if="visible" @click="showMore" class="category-title category-texted">Show more</button>
+      <button v-if="!visible" @click="hide" class="category-title category-texted">Hide</button>
     </div>
     <div class="category-list-items">
       <NewsItem v-for="(info, key) in dataResponse" :key="key" :info="info" :title="info.title"
