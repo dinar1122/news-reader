@@ -1,18 +1,21 @@
-# news-reader
+## news-reader
 
-![Главная](https://imgur.com/M4LvtuM)
-```
-работает с апи только через **localhost**
-```
-## Project setup
+[![Главная](https://i.ibb.co/jwC4FQh/2024-03-11-082055.png)](https://ibb.co/wB1y0KX)
+
+Приложение новостной ридер, написанное на vue, использующее открытый API newsapi.org, 
+имеется система подписок на источники (LocalStorage), разделение на категории новостей и карточки
+
+api работает  только через localhost
+
+## Начало работы
 ```
 npm install
 ```
-
-### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
+
+### Compiles and hot-reloads for development
 
 ### Compiles and minifies for production
 ```
