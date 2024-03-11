@@ -1,6 +1,6 @@
 ## news-reader
 
-[![Главная](https://i.ibb.co/jwC4FQh/2024-03-11-082055.png)](https://ibb.co/wB1y0KX)
+[![Главная](https://i.ibb.co/jwC4FQh/2024-03-11-082055.png)](https://ibb.co/X5nJTKX)
 
 Приложение новостной ридер, написанное на vue, использующее открытый API newsapi.org, 
 имеется система подписок на источники (LocalStorage), разделение на категории новостей и карточки
